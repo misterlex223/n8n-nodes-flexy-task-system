@@ -20,13 +20,13 @@ This node provides full integration with the Claude Task System API, enabling yo
 
 1. In n8n, go to **Settings > Community Nodes**
 2. Click **Install**
-3. Enter: `n8n-nodes-claude-task-system`
+3. Enter: `n8n-node-flexy-task-system`
 4. Click **Install**
 
 ### Via npm
 
 ```bash
-npm install n8n-nodes-claude-task-system
+npm install n8n-node-flexy-task-system
 ```
 
 ## Credentials
@@ -258,5 +258,5 @@ MIT
 
 ## Links
 
-- [Claude Task System API Documentation](https://github.com/your-org/claude-task-system)
+- [Claude Task System API Documentation](https://github.com/misterlex223/n8n-node-flexy-task-system)
 - [n8n Community Nodes](https://community.n8n.io/)

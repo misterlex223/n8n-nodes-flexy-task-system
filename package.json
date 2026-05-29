@@ -11,14 +11,14 @@
     "ai"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/your-org/n8n-nodes-claude-task-system",
+  "homepage": "https://github.com/misterlex223/n8n-node-flexy-task-system",
   "author": {
-    "name": "Your Name",
-    "email": "your@email.com"
+    "name": "misterlex223",
+    "email": "misterlex223@users.noreply.github.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-org/n8n-nodes-claude-task-system.git"
+    "url": "git+https://github.com/misterlex223/n8n-node-flexy-task-system.git"
   },
   "main": "index.js",
   "n8n": {

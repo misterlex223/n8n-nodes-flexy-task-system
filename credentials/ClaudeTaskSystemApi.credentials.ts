@@ -3,7 +3,7 @@ import type { ICredentialType, INodeProperties } from 'n8n-workflow';
 export class ClaudeTaskSystemApi implements ICredentialType {
 	name = 'claudeTaskSystemApi';
 	displayName = 'Claude Task System API';
-	documentationUrl = 'https://github.com/misterlex223/n8n-node-flexy-task-system';
+	documentationUrl = 'https://github.com/misterlex223/n8n-nodes-flexy-task-system#readme';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'API Key',
