@@ -1,0 +1,18 @@
+# 構建腳本和配置
+gulpfile.js
+tsconfig.json
+
+# 依賴
+node_modules/
+
+# 開發文件
+.gitignore
+*.log
+
+# TypeScript 源文件（只發布編譯後的 JS）
+nodes/**/*.ts
+!nodes/**/*.d.ts
+
+# 保留必要的文件
+!credentials/**/*.json
+!dist/

@@ -1,4 +1,4 @@
-# n8n-nodes-claude-task-system
+# n8n-node-flexy-task-system
 
 n8n community node for [Claude Task System](https://github.com/your-org/claude-task-system) API integration.
 

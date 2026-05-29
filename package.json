@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-claude-task-system",
+  "name": "n8n-node-flexy-task-system",
   "version": "1.0.0",
   "description": "N8N node for Claude Task System API integration",
   "keywords": [
@@ -26,32 +26,37 @@
     "credentials": [
       {
         "name": "claudeTaskSystemApi",
-        "source": "dist/credentials/ClaudeTaskSystemApi.credentials.json"
+        "source": "credentials/ClaudeTaskSystemApi.credentials.json"
       }
     ],
     "nodes": [
       {
-        "name": "claudeTaskSystem",
+        "name": "ClaudeTaskSystem",
         "source": "dist/nodes/ClaudeTaskSystem.node.js",
         "displayName": "Claude Task System",
-        "name": "ClaudeTaskSystem",
-        "group": ["transform"],
-        "version": 1.0,
+        "group": [
+          "transform"
+        ],
+        "version": 1,
         "description": "Integrate with Claude Task System API for session and task management",
         "defaults": {},
-        "inputs": ["main"],
-        "outputs": ["main"]
+        "inputs": [
+          "main"
+        ],
+        "outputs": [
+          "main"
+        ]
       }
     ]
   },
   "devDependencies": {
-    "n8n-workflow": "^1.0.0",
     "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^9.0.0",
     "gulp": "^5.0.0",
     "gulp-typescript": "^5.0.1",
+    "n8n-workflow": "^1.120.14",
     "typescript": "^5.0.0",
     "typescript-transform-paths": "^3.0.0"
   },
