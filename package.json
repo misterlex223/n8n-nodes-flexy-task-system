@@ -1,0 +1,64 @@
+{
+  "name": "n8n-nodes-claude-task-system",
+  "version": "1.0.0",
+  "description": "N8N node for Claude Task System API integration",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "claude",
+    "task",
+    "session",
+    "ai"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/your-org/n8n-nodes-claude-task-system",
+  "author": {
+    "name": "Your Name",
+    "email": "your@email.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/n8n-nodes-claude-task-system.git"
+  },
+  "main": "index.js",
+  "n8n": {
+    "n8nVersionMin": "1.0.0",
+    "credentials": [
+      {
+        "name": "claudeTaskSystemApi",
+        "source": "dist/credentials/ClaudeTaskSystemApi.credentials.json"
+      }
+    ],
+    "nodes": [
+      {
+        "name": "claudeTaskSystem",
+        "source": "dist/nodes/ClaudeTaskSystem.node.js",
+        "displayName": "Claude Task System",
+        "name": "ClaudeTaskSystem",
+        "group": ["transform"],
+        "version": 1.0,
+        "description": "Integrate with Claude Task System API for session and task management",
+        "defaults": {},
+        "inputs": ["main"],
+        "outputs": ["main"]
+      }
+    ]
+  },
+  "devDependencies": {
+    "n8n-workflow": "^1.0.0",
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "gulp": "^5.0.0",
+    "gulp-typescript": "^5.0.1",
+    "typescript": "^5.0.0",
+    "typescript-transform-paths": "^3.0.0"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "lint": "eslint --ext .ts nodes/ credentials/",
+    "lint:fix": "eslint --fix --ext .ts nodes/ credentials/"
+  }
+}
