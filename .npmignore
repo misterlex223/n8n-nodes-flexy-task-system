@@ -12,7 +12,8 @@ node_modules/
 # TypeScript 源文件（只發布編譯後的 JS）
 nodes/**/*.ts
 !nodes/**/*.d.ts
+credentials/**/*.ts
+!credentials/**/*.d.ts
 
 # 保留必要的文件
-!credentials/**/*.json
 !dist/

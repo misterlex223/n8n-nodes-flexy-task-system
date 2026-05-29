@@ -26,7 +26,7 @@
     "credentials": [
       {
         "name": "claudeTaskSystemApi",
-        "source": "credentials/ClaudeTaskSystemApi.credentials.json"
+        "source": "dist/credentials/ClaudeTaskSystemApi.credentials.js"
       }
     ],
     "nodes": [

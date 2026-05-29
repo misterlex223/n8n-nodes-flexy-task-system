@@ -20,6 +20,6 @@
       }
     ]
   },
-  "include": ["nodes/**/*"],
-  "exclude": ["node_modules", "dist", "credentials/**/*.json"]
+  "include": ["nodes/**/*", "credentials/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
