@@ -84,13 +84,14 @@ export class ClaudeTaskSystem {
       {
         displayName: 'GitHub Issue ID',
         name: 'githubIssueId',
-        type: 'number',
+        type: 'string',
         displayOptions: {
           show: {
             operation: ['createSession']
           }
         },
         required: false,
+        default: '',
         description: 'GitHub Issue number'
       },
       {
@@ -103,6 +104,7 @@ export class ClaudeTaskSystem {
           }
         },
         required: false,
+        default: '',
         description: 'GitHub Issue title'
       },
       {
@@ -128,6 +130,7 @@ export class ClaudeTaskSystem {
           }
         },
         required: false,
+        default: '',
         typeOptions: {
           rows: 4
         },
@@ -289,10 +292,10 @@ export class ClaudeTaskSystem {
 
         case 'createSession': {
           const type = this.getNodeParameter('type', i) as string;
-          const githubIssueId = this.getNodeParameter('githubIssueId', i, undefined) as number | undefined;
-          const githubIssueTitle = this.getNodeParameter('githubIssueTitle', i, undefined) as string | undefined;
+          const githubIssueId = this.getNodeParameter('githubIssueId', i) as string;
+          const githubIssueTitle = this.getNodeParameter('githubIssueTitle', i) as string;
           const workingDirectory = this.getNodeParameter('workingDirectory', i) as string;
-          const initialPrompt = this.getNodeParameter('initialPrompt', i, undefined) as string | undefined;
+          const initialPrompt = this.getNodeParameter('initialPrompt', i) as string;
           const autoCreateDirectory = this.getNodeParameter('autoCreateDirectory', i) as boolean;
           const timeout = this.getNodeParameter('timeout', i) as number;
 
@@ -304,9 +307,9 @@ export class ClaudeTaskSystem {
             timeout
           };
 
-          if (githubIssueId !== undefined) payload.githubIssueId = githubIssueId;
-          if (githubIssueTitle !== undefined) payload.githubIssueTitle = githubIssueTitle;
-          if (initialPrompt !== undefined) payload.initialPrompt = initialPrompt;
+          if (githubIssueId) payload.githubIssueId = parseInt(githubIssueId, 10);
+          if (githubIssueTitle) payload.githubIssueTitle = githubIssueTitle;
+          if (initialPrompt) payload.initialPrompt = initialPrompt;
 
           result = await makeRequest('POST', '/session', payload);
           break;
