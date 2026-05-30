@@ -11,7 +11,9 @@ export class ClaudeTaskSystem {
     group: ['transform'],
     version: 1,
     description: 'Integrate with Claude Task System API for session and task management',
-    defaults: {},
+    defaults: {
+      name: 'Claude Task System',
+    },
     inputs: ['main'],
     outputs: ['main'],
     credentials: [
