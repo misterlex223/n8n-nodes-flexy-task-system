@@ -188,6 +188,7 @@ export class ClaudeTaskSystem {
           }
         },
         required: false,
+        default: '',
         placeholder: 'github_issue',
         description: 'Filter by session type (e.g., github_issue, manual)'
       },
